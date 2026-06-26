@@ -72,7 +72,18 @@ Before any future attack simulations, visibility was enabled through PowerShell 
 
 ## Screenshots
 
-Screenshots will be added as the portfolio continues to expand.
+### Creating the Windows Virtual Machine
+
+![Creating some intentional misconfigurations](screenshots/intentional-misconfigurations.png)
+
+---
+
+### Event Logging
+
+![Event logging action](screenshots/event-logging.png)
+
+### Sysmon Logging
+![Sysmon up and running](screenshots/sysmon-operational-log.png)
 
 ---
 
@@ -80,4 +91,4 @@ Screenshots will be added as the portfolio continues to expand.
 
 **Mission 2 – Building a Realistic Windows Machine**
 
-Link will be added after the article is published.
+https://hupfendynamics.com/blog/f/mission-20-%E2%80%93-building-a-windows-victim-machine?blogcategory=Missions
