@@ -90,9 +90,40 @@ Finally, realistic user activity was introduced to ensure the workstation produc
 
 ---
 
-## Screenshots
+## Implementation Screenshots
 
-*(Screenshots documenting the workstation build and hardening process will be added here.)*
+### Creating the Initial User
+
+The initial user account establishes the administrative foundation of the workstation before additional security controls are introduced.
+![Creating the Initial User](screenshots/creating-initial-user.png)
+
+---
+
+### Creating the ITAdmin Account
+
+Rather than performing everyday work with elevated privileges, a dedicated admin account is created for system administrative tasks. This separation helps reduce unnecessary exposure of privileged credentials and alilgns with the principle of least privilege.
+![ITAdmin Account](screenshots/itadmin-account.png)
+
+---
+
+### Administrative Password Rotation
+
+Administrative tasks can often be automated to improve both consistency and accountablility. This PowerShell script demonstrates automated local administrator password rotation while recording activity in the Windows Event log for auditing purposes.
+![PowerShell Password Rotation](screenshots/powershell-password-rotation.png)
+
+---
+
+### Windows Event Viewer
+
+Windows Event Viewer provides the visibility needed to monitor authentication events, system activity, and security-related changes. Establishing comprehensive logging before conducting security testing ensures evidence for future investigations.
+![Windows Event Viewer](screenshots/windows-event-viewer.png)
+
+---
+
+### Local Group Policy
+
+Local Group Policy was used to configure security settings that strengthen the workstation while maintaining usability. Applying policy-based controls establishes a consistent security baseline and supports enterprise-style endpoint management.
+![Local Group Policy](screenshots/group-policy-editor.png)
 
 ---
 

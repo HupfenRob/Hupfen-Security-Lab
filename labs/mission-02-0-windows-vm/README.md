@@ -72,7 +72,7 @@ Before any future attack simulations, visibility was enabled through PowerShell 
 
 ## Screenshots
 
-### Creating the Windows Virtual Machine
+### Creating Intentional Misconfigurations
 
 ![Creating some intentional misconfigurations](screenshots/intentional-misconfigurations.png)
 
