@@ -101,14 +101,14 @@ The initial user account establishes the administrative foundation of the workst
 
 ### Creating the ITAdmin Account
 
-Rather than performing everyday work with elevated privileges, a dedicated admin account is created for system administrative tasks. This separation helps reduce unnecessary exposure of privileged credentials and alilgns with the principle of least privilege.
+Rather than performing everyday work with elevated privileges, a dedicated admin account is created for system administrative tasks. This separation helps reduce unnecessary exposure of privileged credentials and aligns with the principle of least privilege.
 ![ITAdmin Account](screenshots/itadmin-account.png)
 
 ---
 
 ### Administrative Password Rotation
 
-Administrative tasks can often be automated to improve both consistency and accountablility. This PowerShell script demonstrates automated local administrator password rotation while recording activity in the Windows Event log for auditing purposes.
+Administrative tasks can often be automated to improve both consistency and accountablility. This PowerShell script demonstrates automated local administrator password rotation while recording activity in the Windows Event Log for auditing purposes.
 ![PowerShell Password Rotation](screenshots/powershell-password-rotation.png)
 
 ---
