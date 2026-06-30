@@ -46,7 +46,7 @@ Before any future attack simulations, visibility was enabled through PowerShell 
 
 ---
 
-## Security Concept Demonstrated
+## Security Concepts Demonstrated
 
 - Realistic Endpoint Design
 - Intentional Misconfiguration
@@ -63,7 +63,7 @@ Before any future attack simulations, visibility was enabled through PowerShell 
 - VMware Tools installed
 - Baseline snapshot created
 - Standard user activity simulated
-- Intentional weakness introduced
+- Intentional weaknesses introduced
 - PowerShell Logging enabled
 - Advanced Audit Policy configured
 - Sysmon installed
@@ -106,14 +106,17 @@ Before any future attack simulations, visibility was enabled through PowerShell 
 
 ![Event logging action](screenshots/event-logging.png)
 
+---
+
 ### Sysmon Logging
+
 ![Sysmon up and running](screenshots/sysmon-operational-log.png)
 
 ---
 
 ## Future Use
 
-This workstation serves as teh realistic Windows endpoint used for future attack simulation, vulnerability management, detection engineering, and incident response exercises.
+This workstation serves as the realistic Windows endpoint used for future attack simulation, vulnerability management, detection engineering, and incident response exercises.
 
 ---
 
