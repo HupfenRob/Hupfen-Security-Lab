@@ -190,4 +190,4 @@ Local Group Policy was used to configure security settings that strengthen the w
 
 **Mission 2.5 – Building a Secure Windows Workstation**
 
-https://hupfendynamics.com/blog/f/mission-25---building-a-secure-windows-workstation
+https://hupfendynamics.com/blog/f/mission-25-building-a-strong-windows-machine
