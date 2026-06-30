@@ -52,12 +52,71 @@ Finally, realistic user activity was introduced to ensure the workstation produc
 
 ## Security Concepts Demonstrated
 
+- Security by Design
 - Defense in Depth
 - Least Privilege
+- Administrative Separation
 - Secure Configuration Management
 - Endpoint Hardening
+- Endpoint Visibility
 - Telemetry Collection
-- Administrative Separation
+- Attack Surface Reduction
+- Security Validation
+- Digital forensics Readiness
+
+---
+
+## Implemented Controls
+
+The following security controls were implemented as part of this build:
+
+- Windows fully updated
+- VMware Tools installed
+- Baseline snapshot created
+- Dedicated ITAdmin account
+- Standard user account
+- Advanced Audit Policy
+- PowerShell Logging
+- Sysmon
+- Enhanced Windows Event Logging
+- Microsoft Defender
+- Microsoft Defender Attack Surface Reduction (ASR)
+- SmartScreen
+- Controlled Folder Access
+- AppLocker
+- Local Security Authority (LSA) Protection
+- Attack surface reduction through removal of unnecessary features
+
+---
+
+## Validation
+
+After configuration, the workstation was validated to confirm that security controls functioned as expected.
+
+Validation inluded:
+
+- Administrative account separation
+- Windows Event Logging
+- PowerShell Logging
+- Sysmon telemetry
+- Security policy application
+- Endpoint functionality after hardening
+
+---
+
+## Future Use
+
+This workstation serves as the hardened Windows endpoint used throughout the remainder of the Hupfen Security Lab.
+
+Future projects include:
+
+- Linux Administration
+- PCI DSS Compliance
+- Vulnerability Management
+- Detection Engineering
+- Attack Simulation
+- Digital Forensics
+- Incident Response
 
 ---
 
