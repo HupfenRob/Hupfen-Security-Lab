@@ -46,6 +46,30 @@ Before any future attack simulations, visibility was enabled through PowerShell 
 
 ---
 
+## Security Concept Demonstrated
+
+- Realistic Endpoint Design
+- Intentional Misconfiguration
+- Endpoint Visibility
+- Telemetry Collection
+- Attack Simulation Readiness
+- Digital Forensics Readiness
+
+---
+
+## Implemented Controls
+
+- Windows 10 Pro virtual machine created
+- VMware Tools installed
+- Baseline snapshot created
+- Standard user activity simulated
+- Intentional weakness introduced
+- PowerShell Logging enabled
+- Advanced Audit Policy configured
+- Sysmon installed
+
+---
+
 ## Skills Demonstrated
 
 - Windows Administration
@@ -70,7 +94,7 @@ Before any future attack simulations, visibility was enabled through PowerShell 
 
 ---
 
-## Screenshots
+## Implementation Screenshots
 
 ### Creating Intentional Misconfigurations
 
@@ -84,6 +108,12 @@ Before any future attack simulations, visibility was enabled through PowerShell 
 
 ### Sysmon Logging
 ![Sysmon up and running](screenshots/sysmon-operational-log.png)
+
+---
+
+## Future Use
+
+This workstation serves as teh realistic Windows endpoint used for future attack simulation, vulnerability management, detection engineering, and incident response exercises.
 
 ---
 
