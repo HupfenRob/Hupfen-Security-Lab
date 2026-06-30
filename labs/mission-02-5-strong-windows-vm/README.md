@@ -50,6 +50,17 @@ Finally, realistic user activity was introduced to ensure the workstation produc
 
 ---
 
+## Security Concepts Demonstrated
+
+- Defense in Depth
+- Least Privilege
+- Secure Configuration Management
+- Endpoint Hardening
+- Telemetry Collection
+- Administrative Separation
+
+---
+
 ## Skills Demonstrated
 
 - Windows Administration
