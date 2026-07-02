@@ -1,0 +1,32 @@
+############################################################
+# Detection Name:
+# Failed Login Activity
+#
+# Description:
+# Identify failed Windows logon attempts and summarize them by account and host.
+#
+# Data Source:
+# Windows Security Event Log
+#
+# Event ID(s):
+# 4625
+#
+# MITRE ATT&CK Technique(s):
+# T1110 - Brute Force
+#
+# Validation Status:
+# Validated
+#
+# Author:
+# Rob Vaul
+#
+# Version:
+# 1.0
+#
+# Last Updated:
+# 2026-07-02
+############################################################
+
+index=* EventCode=4625
+| stats count by Account_Name, host
+| sort - count
