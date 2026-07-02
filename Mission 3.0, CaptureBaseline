@@ -1,1 +1,0 @@
-sudo sha256sum /etc/passwd /etc/shadow /etc/group /etc/sudoers /etc/ssh/sshd_config /etc/issue.net > ~/baseline_hashes.txt
