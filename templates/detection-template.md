@@ -12,7 +12,7 @@ Describe what this detection is designed to identify.
 |-------|-------|
 | Status | Draft |
 | Detection Version | 1.0 |
-| Severity | Informational |
+| Severity | Informational / Low / Medium / High |
 | MITRE ATT&CK | |
 | Data Source | |
 | Event ID(s) | |
@@ -51,6 +51,14 @@ List possible improvements and methods to reduce false positives.
 
 ---
 
-## Analyst Notes
+## Investigative Notes
 
 Additional observations, references, or lessons learned.
+
+---
+
+## References
+
+---
+
+## Detection Status
