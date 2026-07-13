@@ -1,0 +1,36 @@
+##########################################################
+# Detection Name:
+# Port Scan Activity
+#
+# Description:
+# Identifies Suricata ET SCAN alerts associated with
+# network reconnaissance activity and displays the raw
+# alert payload for investigation.
+#
+# Data Source:
+# Suricata IDS
+#
+# Event ID(s):
+# ET SCAN signature-based alert
+#
+# MITRE ATT&CK Technique(s):
+# T1046 - Network Service Discovery
+#
+# Validation Status:
+# Validated
+#
+# Author:
+# Hupfen Dynamics
+#
+# Version:
+# 1.0
+#
+# Last Updated:
+# 2026-07-13
+##########################################################
+
+# SPL Query
+
+index=* sourcetype=linux_messages_syslog "ET SCAN"
+| table _time, host, _raw
+| sort - _time
