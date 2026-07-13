@@ -1,0 +1,36 @@
+##########################################################
+# Detection Name:
+# User Account Creation
+#
+# Description:
+# Identifies newly created local Windows user accounts
+# using Windows Security Event ID 4720 and displays the
+# account name, host, and associated security identifier.
+#
+# Data Source:
+# Windows Security Event Log
+#
+# Event ID(s):
+# 4720 - A user account was created
+#
+# MITRE ATT&CK Technique(s):
+# T1136 - Create Account
+#
+# Validation Status:
+# Validated
+#
+# Author:
+# Hpfen Dynamics
+#
+# Version:
+# 1.0
+#
+# Last Updated:
+# 2026-07-13
+##########################################################
+
+# SPL Query
+
+index=* EventCode=4720
+| table _time, ComputerName, SAM_Account_Name, Security_ID
+| sort - _time
