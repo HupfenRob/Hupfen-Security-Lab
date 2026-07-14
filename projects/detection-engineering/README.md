@@ -23,8 +23,7 @@ This project demonstrates the process of building, validating, and maintaining s
 
 ## Detections
 
-- [Failed Login Activity](detections/failed-logins.md)
-- [Port Scan Detection](detections/port-scan.md)
-- [PowerShell Execution](detections/powershell-execution.md)
-- [New Administrator Account](detections/new-admin-account.md)
-- [Suspicious Process Creation](detections/suspicious-process-creation.md)
+- [Failed Login Detection](detections/failed_logins.md)
+- [Port Scan Detection](detections/port_scan_activity.md)
+- [PowerShell Execution Detection](detections/powershell_execution.md)
+- [User Account Creation Detection](detections/user_account_creation.md)

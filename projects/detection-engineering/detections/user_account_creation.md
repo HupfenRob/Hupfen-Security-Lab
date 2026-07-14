@@ -1,4 +1,6 @@
-# Detection – User Account Creation
+# Detection Name
+
+User Account Creation
 
 ## Objective
 

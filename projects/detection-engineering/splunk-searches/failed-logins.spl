@@ -1,6 +1,6 @@
 ############################################################
 # Detection Name:
-# Failed Login Activity
+# Failed Login
 #
 # Description:
 # Identify failed Windows logon attempts and summarize them by account and host.

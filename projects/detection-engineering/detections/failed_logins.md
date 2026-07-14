@@ -1,4 +1,6 @@
-# Failed Login Activity
+# Detection Name
+
+Failed Login
 
 ## Objective
 
