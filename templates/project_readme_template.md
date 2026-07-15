@@ -1,3 +1,18 @@
+<!--
+README Template
+
+Guidelines
+
+- Place screenshots in /screenshots
+- Place diagrams in /diagrams
+- Use one image per implementation step
+- Keep Project Summary to 2–3 paragraphs
+- Use sentence case for section descriptions
+- Separate each major section with ---
+- Keep Technologies Used limited to major technologies
+- Future Use should focus on follow-on projects
+-->
+
 # Project Title
 
 ## Objective
