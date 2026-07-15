@@ -24,9 +24,9 @@ Install and configure VMware Workstation Pro to establish the virtualization pla
 
 ## Technologies Used
 
+- Intel VT-x Hardware Virtualization
 - VMware Workstation Pro
 - Windows 11 Home
-- Intel VT-x Hardware Virtualization
 
 ---
 

@@ -8,14 +8,14 @@ Build and harden a Windows 10 Pro workstation that demonstrates enterprise secur
 
 ## Technologies Used
 
-- VMware Workstation Pro
-- Windows 10 Pro
+- Advanced Audit Policy
+- AppLocker
 - Microsoft Defender
 - Microsoft Defender Attack Surface Reduction (ASR)
-- AppLocker
 - Sysmon
+- VMware Workstation Pro
+- Windows 10 Pro
 - Windows PowerShell
-- Advanced Audit Policy
 
 ---
 

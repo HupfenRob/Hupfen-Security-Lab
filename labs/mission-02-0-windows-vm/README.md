@@ -8,14 +8,14 @@ Build and configure a Windows 10 Pro virtual machine that serves as a realistic 
 
 ## Technologies Used
 
-- VMware Workstation Pro
-- Windows 10 Pro
-- VMware Tools
-- Sysmon
-- Windows PowerShell
 - Advanced Audit Policy
 - Local Group Policy
+- Sysmon
+- VMware Tools
+- VMware Workstation Pro
+- Windows 10 Pro
 - Windows Event Viewer
+- Windows PowerShell
 
 ---
 
