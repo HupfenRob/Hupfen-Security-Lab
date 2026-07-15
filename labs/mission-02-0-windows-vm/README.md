@@ -1,12 +1,8 @@
 # Mission 2 – Building a Realistic Windows Machine
 
-Build and prepare a Windows 10 Pro virtual machine that serves as a realistic victim workstation for future security testing, detection engineering, and incident response exercises.
-
----
-
 ## Objective
 
-Design and configure a Windows 10 Pro virtual machine that closely resembles a typical workstation while intentionally introducing realistic weaknesses and enabling comprehensive security logging for future offensive and defensive exercises.
+Build and configure a Windows 10 Pro virtual machine that serves as a realistic endpoint for future attack simulation, detection engineering, vulnerability management, digital forensics, and incident response activities within the Hupfen Security Lab.
 
 ---
 
@@ -15,9 +11,9 @@ Design and configure a Windows 10 Pro virtual machine that closely resembles a t
 - VMware Workstation Pro
 - Windows 10 Pro
 - VMware Tools
-- Windows PowerShell
-- Windows Advanced Audit Policy
 - Sysmon
+- Windows PowerShell
+- Advanced Audit Policy
 - Local Group Policy
 - Windows Event Viewer
 
@@ -27,46 +23,46 @@ Design and configure a Windows 10 Pro virtual machine that closely resembles a t
 
 | Component | Configuration |
 |-----------|---------------|
-| Operating System | Windows 10 Pro |
 | Hypervisor | VMware Workstation Pro |
-| Network Mode | Host-Only, temporarily switched to NAT for updates and software installation |
-| Primary Role | Victim Workstation |
+| Operating System | Windows 10 Pro |
+| Network Mode | Host-Only (temporarily switched to NAT for updates and software installation) |
+| Primary Goal | Realistic Windows workstation for future security operations |
 
 ---
 
-## Project Summary
+## Mission Overview
 
-This mission focused on creating the first endpoint within the Hupfen Security Lab.
+This mission established the first endpoint within the Hupfen Security Lab by creating a Windows 10 Pro workstation that closely resembles a real user's computer. Rather than deploying a clean operating system alone, realistic software, user activity, and system artifacts were intentionally created to more closely simulate an enterprise workstation.
 
-Rather than simply installing Windows, the objective was to build a workstation that resembles a real user's computer. Common applications were installed, normal browsing activity was simulated, and user artifacts were intentionally created to provide realistic evidence for future investigations.
+After the operating system was configured, controlled weaknesses were introduced to support future attack simulations and security assessments. Finally, comprehensive Windows logging was enabled through PowerShell logging, Advanced Audit Policy, and Sysmon to ensure future offensive activity would generate meaningful telemetry for detection engineering, incident response, and forensic investigations.
 
-Once the system had been established, controlled misconfigurations were introduced, including weak credentials, Remote Desktop configuration, SMB file sharing, and additional local accounts. These changes create the types of weaknesses commonly encountered during security assessments without exposing production systems to unnecessary risk.
-
-Before any future attack simulations, visibility was enabled through PowerShell logging, Advanced Audit Policy, and Sysmon. This ensures that later offensive exercises generate meaningful telemetry for detection engineering, incident response, and forensic analysis.
+![Windows Workstation Overview](diagrams/mission_2_diagram.png)
 
 ---
 
 ## Security Concepts Demonstrated
 
-- Realistic Endpoint Design
-- Intentional Misconfiguration
+- Endpoint Hardening
 - Endpoint Visibility
-- Telemetry Collection
-- Attack Simulation Readiness
+- Security Telemetry
+- Windows Auditing
+- Sysmon Monitoring
+- Intentional Misconfiguration
 - Digital Forensics Readiness
+- Detection Engineering Preparation
 
 ---
 
-## Implemented Controls
+## Objectives Completed
 
-- Windows 10 Pro virtual machine created
-- VMware Tools installed
-- Baseline snapshot created
-- Standard user activity simulated
-- Intentional weaknesses introduced
-- PowerShell Logging enabled
-- Advanced Audit Policy configured
-- Sysmon installed
+- Installed Windows 10 Pro
+- Installed VMware Tools
+- Created realistic workstation activity
+- Introduced controlled security weaknesses
+- Configured Windows PowerShell logging
+- Enabled Advanced Audit Policy
+- Installed and validated Sysmon
+- Created a reusable Windows security testing platform
 
 ---
 
@@ -74,49 +70,89 @@ Before any future attack simulations, visibility was enabled through PowerShell 
 
 - Windows Administration
 - Virtual Machine Deployment
-- Intentional Misconfiguration
-- PowerShell Logging
-- Windows Advanced Audit Policy
-- Sysmon Deployment
+- Windows Logging
+- Sysmon Configuration
+- PowerShell Administration
+- Endpoint Security
 - Security Monitoring
-- Detection Engineering Fundamentals
 - Technical Documentation
 
 ---
 
-## Key Takeaways
+## Validation
 
-- Designed a realistic Windows victim workstation.
-- Created believable user activity and system artifacts.
-- Introduced controlled security weaknesses for future attack simulations.
-- Enabled enterprise-style logging before conducting offensive testing.
-- Established a reusable baseline for future detection engineering exercises.
+Validation included:
 
----
-
-## Implementation Screenshots
-
-### Creating Intentional Misconfigurations
-
-![Creating some intentional misconfigurations](screenshots/intentional-misconfigurations.png)
+- Confirming Windows installed successfully
+- Verifying VMware Tools functionality
+- Confirming intentional configuration changes
+- Verifying Windows audit events
+- Confirming Sysmon operational logging
+- Confirming the workstation was prepared for future attack simulations
 
 ---
 
-### Event Logging
+## Implementation
 
-![Event logging action](screenshots/event-logging.png)
+### Installing Windows 10 Pro
 
----
+The Windows virtual machine was deployed and configured as the first endpoint within the Hupfen Security Lab. VMware Tools were installed to improve virtual hardware integration and overall usability before additional security configuration began.
 
-### Sysmon Logging
-
-![Sysmon up and running](screenshots/sysmon-operational-log.png)
+![Installation Screenshot](screenshots/installation_screenshot.png)
 
 ---
 
-## Future Use
+### Creating a Realistic Workstation
 
-This workstation serves as the realistic Windows endpoint used for future attack simulation, vulnerability management, detection engineering, and incident response exercises.
+Applications, user activity, and normal workstation artifacts were created to make the virtual machine resemble a typical enterprise endpoint. Establishing realistic baseline activity provides better context for future investigations and detection engineering exercises.
+
+![Workstation Configuration](screenshots/workstation_configuration.png)
+
+---
+
+### Introducing Controlled Misconfigurations
+
+Several intentional weaknesses were configured, including weak credentials, Remote Desktop access, SMB sharing, and additional local user accounts. These controlled misconfigurations create realistic attack paths while remaining isolated inside the lab environment.
+
+![Intentional Misconfigurations](screenshots/intentional_misconfigurations.png)
+
+---
+
+### Configuring Windows Security Logging
+
+Windows logging was expanded by enabling Advanced Audit Policy, PowerShell logging, and Sysmon. Together, these telemetry sources provide detailed visibility into authentication events, process creation, PowerShell activity, and other system behavior required for future security monitoring.
+
+![Windows Event Logging](screenshots/event_logging.png)
+
+---
+
+### Validating Sysmon Telemetry
+
+Sysmon operational logs were reviewed to confirm successful installation and verify that endpoint telemetry was being generated correctly. This validation ensured that future detections would have access to detailed endpoint events beyond the default Windows Security log.
+
+![Sysmon Operational Log](screenshots/sysmon_operational_log.png)
+
+---
+
+## Lessons Learned
+
+- Building realistic endpoints improves future security testing
+- Logging should be configured before conducting attack simulations
+- Sysmon significantly expands Windows endpoint visibility
+- Controlled weaknesses create repeatable attack scenarios without introducing production risk
+
+---
+
+## Next Mission
+
+Completion of this mission prepares the lab for:
+
+- Linux Server deployment
+- Centralized logging
+- Vulnerability management
+- Detection engineering
+- Attack simulation
+- Incident response
 
 ---
 
