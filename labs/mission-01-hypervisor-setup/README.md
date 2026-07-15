@@ -1,12 +1,24 @@
+<!--
+Mission README Template
+
+Guidelines
+
+- Place screenshots in /screenshots
+- Place diagrams in /diagrams (if applicable)
+- Present implementation in chronological order
+- Use one screenshot per major step
+- Explain why each step is performed
+- Separate each major section with ---
+- Keep screenshots close to the related text
+- End with validation and next steps
+- Keep implementation sections focused on one major task
+-->
+
 # Mission 1 – Installing a Hypervisor
-
-Prepare the host system for virtualization by installing and configuring VMware Workstation Pro as the foundation of the Hupfen Security Lab.
-
----
 
 ## Objective
 
-Prepare the host system for virtualization by installing and configuring VMware Workstation Pro as the foundation of the cybersecurity lab environment.
+Install and configure VMware Workstation Pro to establish the virtualization platform that serves as the foundation of the Hupfen Security Lab.
 
 ---
 
@@ -25,39 +37,37 @@ Prepare the host system for virtualization by installing and configuring VMware 
 | Host System | HP Envy Laptop |
 | Processor | Intel Core i7 (11th Generation) |
 | Memory | 16 GB RAM |
-| Host OS | Windows 11 Home |
+| Host Operating System | Windows 11 Home |
 | Hypervisor | VMware Workstation Pro |
+| Primary Goal | Virtualization Platform |
 
 ---
 
-## Project Summary
+## Mission Overview
 
-This mission establishes the virtualization platform used throughout the Hupfen Security Lab.
+This mission establishes the virtualization platform that supports every subsequent mission and project within the Hupfen Security Lab. Before deploying operating systems or security tools, a reliable hypervisor was required to host multiple isolated virtual machines while providing snapshot capabilities, flexible networking, and simplified system management.
 
-VMware Workstation Pro was selected as the hypervisor due to its stability, snapshot capabilities, networking flexibility, and suitability for hosting multiple security-focused virtual machines on a single physical system.
-
-During installation, Windows virtualization features interfered with VMware's native hypervisor. Resolving this conflict reinforced the importance of understanding how modern operating systems manage hardware-assisted virtualization.
-
-With VMware successfully installed and configured, the lab was ready for the deployment of Windows and Linux virtual machines used in subsequent missions.
+During installation, Windows virtualization features interfered with VMware's native hypervisor. Resolving this conflict reinforced the importance of understanding how modern operating systems interact with hardware-assisted virtualization. With VMware successfully installed and validated, the environment was ready for Windows and Linux virtual machine deployment.
 
 ---
 
 ## Security Concepts Demonstrated
 
-- Virtualize Foundation
+- Virtualization
 - Lab Architecture
-- System Preperation
+- System Preparation
 - Baseline Configuration
-- Technical Documentation
+- Infrastructure Planning
 
 ---
 
-## Implemented Controls
+## Objectives Completed
 
-- VMware Workstation Pro installed
-- Host virtualization support verified
-- Windows virtualization conflicts resolved
-- Baseline virtualization environment prepared
+- Installed VMware Workstation Pro
+- Verified hardware virtualization support
+- Resolved Windows hypervisor conflicts
+- Validated successful virtual machine operation
+- Established the virtualization foundation for the lab
 
 ---
 
@@ -71,27 +81,78 @@ With VMware successfully installed and configured, the lab was ready for the dep
 
 ---
 
-## Key Takeaways
+## Validation
 
-- Established the virtualization foundation for the lab.
-- Verified hardware virtualization support.
-- Resolved Windows hypervisor conflicts.
-- Prepared the environment for future Windows and Linux virtual machines.
+Validation included:
 
----
-
-## Implementation Screenshots
-
-Screenshots will be added as the portfolio continues to grow.
+- Confirming Intel VT-x hardware virtualization support
+- Verifying VMware Workstation Pro installed successfully
+- Resolving Windows virtualization conflicts
+- Confirming VMware launched without errors
+- Preparing the platform for virtual machine deployment
 
 ---
 
-## Future Use
+## Implementation
 
-This mission establishes the virtualization foundation used throughout the rest of the Hupfen Security Lab.
+### Installing VMware Workstation Pro
+
+VMware Workstation Pro was installed to provide the virtualization platform used throughout the Hupfen Security Lab. Snapshot support, virtual networking, and isolated virtual machines provide the flexibility required for future cybersecurity exercises.
+
+![Installing VMware Workstation Pro](screenshots/installing_vm_pro.png)
+
+---
+
+### Resolving Hypervisor Conflicts
+
+Windows virtualization features initially conflicted with VMware's native hypervisor. Identifying and resolving these conflicts ensured VMware could successfully access the system's hardware virtualization capabilities.
+
+![Resolving Hypervisor Conflicts](screenshots/resolving_conflicts.png)
+
+---
+
+### Validating the Installation
+
+After installation, VMware Workstation Pro was launched successfully and verified to be operating correctly. Confirming the virtualization platform before deploying virtual machines established a stable foundation for future missions.
+
+![Validating the Installation](screenshots/validating_installation.png)
+
+---
+
+### Preparing the Lab Environment
+
+With VMware fully operational, the host system was prepared to support Windows and Linux virtual machines used throughout the remainder of the Hupfen Security Lab.
+
+![Preparing the Lab Environment](screenshots/prepping_environment.png)
+
+---
+
+### Virtualization Architecture
+
+With VMware Workstation Pro successfully installed, the host system was capable of supporting multiple isolated virtual machines. This virtualization layer became the foundation for every Windows, Linus, and networking component deployed throughout the remainder of the Hupfen Security Lab.
+
+![Virtualization Architecture](diagrams/virtualization_architecture.png)
+
+## Lessons Learned
+
+- Virtualization platforms depend on hardware-assisted virtualization features being enabled and accessible
+- Windows security features can interfere with third-party hypervisors if not configured appropriately
+- Validating infrastructure before building additional systems reduces future troubleshooting
+- A stable virtualization platform forms the foundation of an effective security lab
+
+---
+
+## Next Mission
+
+Completion of this mission prepares the lab for:
+
+- Windows workstation deployment
+- Linux server deployment
+- Virtual network design
+- Future cybersecurity projects
 
 ## Related Blog Article
 
-**Mission 1 – Installing a Hypervisor**
+**Mission 1 - Installing a Hypervisor**
 
-[Read the article on Hupfen Dynamics](https://hupfendynamics.com/blog/f/mission-1---installing-a-hypervisor)
+https://hupfendynamics.com/blog/f/mission-1---installing-a-hypervisor
