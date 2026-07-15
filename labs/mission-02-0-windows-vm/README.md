@@ -160,4 +160,4 @@ Completion of this mission prepares the lab for:
 
 **Mission 2 – Building a Realistic Windows Machine**
 
-https://hupfendynamics.com/blog/f/mission-20-%E2%80%93-building-a-windows-victim-machine?blogcategory=Missions
+[Read the article at Hupfen Dynamics](https://hupfendynamics.com/blog/f/mission-20-%E2%80%93-building-a-windows-victim-machine?blogcategory=Missions)

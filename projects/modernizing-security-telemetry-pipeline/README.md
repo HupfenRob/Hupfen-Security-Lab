@@ -205,4 +205,4 @@ This modernized telemetry pipeline supports future projects involving:
 
 **Modernizing the Security Telemetry Pipeline**
 
-[Read the article on Hupfen Dynamics](https://hupfendynamics.com/blog/f/modernizing-the-security-telemetry-pipeline)
+[Read the article at Hupfen Dynamics](https://hupfendynamics.com/blog/f/modernizing-the-security-telemetry-pipeline)

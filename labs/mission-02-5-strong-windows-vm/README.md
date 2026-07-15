@@ -168,4 +168,4 @@ Completion of this mission prepares the lab for:
 
 **Mission 2.5 – Building a Secure Windows Workstation**
 
-https://hupfendynamics.com/blog/f/mission-25-building-a-strong-windows-machine
+[Read the article at Hupfen Dynamics](https://hupfendynamics.com/blog/f/mission-25-building-a-strong-windows-machine)

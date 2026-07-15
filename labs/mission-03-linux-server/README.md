@@ -181,4 +181,4 @@ Completion of this mission prepares the lab for:
 
 **Mission 3 – Building a Linux VM Server**
 
-https://hupfendynamics.com/blog/f/mission-3-building-a-linux-vm-server?blogcategory=Missions
+[Read the article at Hupfen Dynamics](https://hupfendynamics.com/blog/f/mission-3-building-a-linux-vm-server?blogcategory=Missions)

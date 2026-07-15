@@ -155,4 +155,4 @@ Completion of this mission prepares the lab for:
 
 **Mission 1 - Installing a Hypervisor**
 
-https://hupfendynamics.com/blog/f/mission-1---installing-a-hypervisor
+[Read the article at Hupfen Dynamics](https://hupfendynamics.com/blog/f/mission-1---installing-a-hypervisor)
