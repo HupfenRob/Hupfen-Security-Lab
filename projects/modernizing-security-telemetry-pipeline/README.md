@@ -23,12 +23,12 @@ Modernize the Suricata telemetry pipeline by replacing traditional syslog-style 
 
 ## Technologies Used
 
-- Splunk Enterprise
-- Suricata IDS
-- pfSense
 - Kali Linux
+- pfSense
 - Secure Shell (SSH)
+- Splunk Enterprise
 - Suricata EVE JSON
+- Suricata IDS
 - Syslog
 
 ---
@@ -110,11 +110,11 @@ Validation included:
 - Generating network reconnaissance traffic from Kali Linux
 - Confirming Suricata detected the activity
 - Verifying telemetry was forwarded through the logging pipeline
-- Confirming structured event data was indexed within Splunk
+- Confirming structured event data was indexed by Splunk
 
 ---
 
-## Implementation Highlights
+## Implementation
 
 ### Original Telemetry Pipeline
 
@@ -142,7 +142,7 @@ After enabling SSH, connectivity was validated from the Windows management works
 
 ### Configuring Suricata EVE JSON
 
-Suricata was reconfigured to generate structured EVE JSON telemetry instead of relying solely on traditional syslog alerts. Structured events preserve significantly more investigative context while improving search and detection capabilities.
+Suricata was reconfigured to generate structured EVE JSON telemetry instead of relying solely on traditional syslog alerts. Structured events preserve significantly more investigative context while improving searching, detection engineering, and incident investigations.
 
 ![Configuring Suricata EVE JSON](screenshots/eve_output_settings.png)
 
@@ -205,4 +205,4 @@ This modernized telemetry pipeline supports future projects involving:
 
 **Modernizing the Security Telemetry Pipeline**
 
-https://hupfendynamics.com/blog/f/modernizing-the-security-telemetry-pipeline
+[Read the article on Hupfen Dynamics](https://hupfendynamics.com/blog/f/modernizing-the-security-telemetry-pipeline)
