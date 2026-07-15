@@ -2,22 +2,22 @@
 
 ## Objective
 
-Build and harden an Ubuntu Server that serves as the foundation for centralized logging, security tooling, forensic analysis, vulnerability management, and future detection engineering projects.
+Build and harden an Ubuntu Server that serves as the foundation for centralized logging, security tooling, forensic analysis, vulnerability management, and future detection engineering projects within the Hupfen Security Lab.
 
 ---
 
 ## Technologies Used
 
+- AIDE
+- apt
+- auditd
+- Bash
+- journald
+- OpenSSH
+- OpenSSL
+- systemd
 - Ubuntu Server 24.04 LTS
 - VMware Workstation Pro
-- OpenSSH
-- auditd
-- journald
-- AIDE
-- OpenSSL
-- Bash
-- Linux Systemd
-- apt Package Manager
 
 ---
 
@@ -25,20 +25,22 @@ Build and harden an Ubuntu Server that serves as the foundation for centralized 
 
 | Component | Configuration |
 |-----------|---------------|
-| Operating System | Ubuntu Server 24.04 LTS |
 | Hypervisor | VMware Workstation Pro |
+| Operating System | Ubuntu Server 24.04 LTS |
 | Network | Management Network |
-| Primary Role | Security Infrastructure Server |
+| Primary Goal | Security infrastructure server for centralized logging and future security operations |
 
 ---
 
-## Project Summary
+## Mission Overview
 
-This mission introduced the first Linux server into the Hupfen Security Lab.
+This mission introduced the first Linux server into the Hupfen Security Lab and established a central platform for future security operations. Rather than deploying Linux as a standalone virtual machine, the server was designed to support centralized logging, security tooling, forensic analysis, vulnerability management, and detection engineering.
 
-Rather than deploying Linux as another standalone virtual machine, the server was designed to become the central platform supporting future security operations. It provides the foundation for centralized logging, security tooling, forensic investigations, vulnerability management, and detection engineering.
+Secure remote administration was configured through OpenSSH, system auditing was enabled with auditd, persistent logging was established through journald, and file integrity monitoring was implemented using AIDE. Baseline validation and system snapshots were completed before additional projects were introduced so future changes could be measured against a trusted baseline.
 
-The server was configured with secure remote administration through OpenSSH, comprehensive auditing with auditd, persistent logging through journald, and file integrity monitoring using AIDE. Baseline validation and system snapshots were performed before additional projects were introduced to ensure future changes could be measured against a trusted configuration.
+---
+
+![Linux Security Server Overview](diagrams/linux_security_server_overview.png)
 
 ---
 
@@ -57,18 +59,18 @@ The server was configured with secure remote administration through OpenSSH, com
 
 ---
 
-## Implemented Controls
+## Objectives Completed
 
-- Ubuntu Server installed
-- OpenSSH configured
-- Remote administration validated
-- System fully updated
-- Baseline snapshot captured
-- auditd configured
-- journald persistence enabled
-- AIDE initialized
-- System baseline documented
-- Administrative activity validated
+- Installed Ubuntu Server 24.04 LTS
+- Configured OpenSSH
+- Validated remote administration
+- Updated the operating system
+- Captured a baseline snapshot
+- Configured auditd
+- Enabled persistent journald logging
+- Initialized AIDE
+- Documented the system baseline
+- Validated administrative activity
 
 ---
 
@@ -78,88 +80,100 @@ The server was configured with secure remote administration through OpenSSH, com
 - SSH Administration
 - Bash
 - System Hardening
-- auditd
-- journald
-- AIDE
+- auditd Configuration
+- journald Configuration
+- AIDE Administration
 - File Integrity Monitoring
 - Security Monitoring
-- Detection Engineering Fundamentals
 - Technical Documentation
-
----
-
-## Key Takeaways
-
-- Built a secure Linux server for enterprise-style security operations.
-- Established centralized logging and auditing capabilities.
-- Implemented file integrity monitoring.
-- Created a trusted system baseline.
-- Prepared the platform for future vulnerability management, detection engineering, and incident response projects.
 
 ---
 
 ## Validation
 
-After configuration, the server was validated to confirm security controls functioned as expected.
-
 Validation included:
 
-- SSH connectivity
-- auditd event generation
-- journald persistence
-- AIDE initialization
-- User privilege separation
-- Baseline integrity verification
+- Confirming SSH connectivity
+- Verifying remote administrative access
+- Confirming auditd event generation
+- Verifying persistent journald logging
+- Confirming AIDE initialization
+- Validating user privilege separation
+- Verifying the trusted system baseline was established
 
 ---
 
-## Implementation Highlights
+## Implementation
 
-### Ubuntu Profile Configuration
+### Configuring the Ubuntu Server Profile
 
-The initial Ubuntu profile configuration establishes the server identity, primary user account, and hostname used throughout the environment.
+The initial Ubuntu profile configuration established the server hostname, primary user account, and system identity used throughout the lab. Defining these values during installation created a consistent baseline for future administration and logging.
 
-![Ubuntu Profile Configuration](screenshots/ubuntu-configuration.png)
-
----
-
-### Remote SSH Administration
-
-OpenSSH allows the Linux server to be administered remotely from another workstation, reflecting how Linux servers are commonly managed in enterprise environments.
-
-![Remote SSH Administration](screenshots/remote-ssh-administration.png)
+![Ubuntu Profile Configuration](screenshots/ubuntu_configuration.png)
 
 ---
 
-### Initial System Validation
+### Enabling Remote SSH Administration
 
-Basic validation confirms system resources, user configuration, and privilege boundaries before additional security controls are introduced.
+OpenSSH was configured to support secure remote administration from the Windows management workstation. This reflects how Linux servers are commonly managed in enterprise environments while reducing the need for direct console access.
 
-![Linux System Validation](screenshots/linux-system-validation.png)
-
----
-
-### Authentication and System Logging
-
-Linux distributes security telemetry across multiple logging components. Reviewing authentication, sudo, and system events confirms that meaningful telemetry is being collected.
-
-![Linux Authentication Logging](screenshots/linux-journalctl-logging.png)
+![Remote SSH Administration](screenshots/remote_ssh_administration.png)
 
 ---
 
-## Future Use
+### Validating the Initial System
 
-This server becomes the backbone of the remaining Hupfen Security Lab.
+System resources, user configuration, network connectivity, and privilege boundaries were reviewed before additional security controls were introduced. Establishing a known-good starting point reduced the risk of building future services on an unverified system.
 
-Future projects include:
+![Linux System Validation](screenshots/linux_system_validation.png)
 
-- Splunk SIEM
-- Centralized Log Management
-- Vulnerability Management
-- PCI DSS Compliance
-- Detection Engineering
-- Digital Forensics
-- Incident Response
+---
+
+### Configuring Persistent System Logging
+
+Linux authentication, sudo activity, and system events were reviewed through journald to confirm that meaningful security telemetry was being collected. Persistent logging ensures that events survive system reboots and remain available for future investigations, centralized log collection, and detection engineering.
+
+![Linux Authentication Logging](screenshots/linux_journalctl_logging.png)
+
+---
+
+### Configuring Linux Audit Logging
+
+The Linux Audit Framework (auditd) was configured to record security-relevant system activity beyond traditional authentication logs. Audit rules were validated to confirm that administrative actions and monitored events generated detailed telemetry suitable for future detection engineering and forensic investigations.
+
+![Linux Audit Logging](screenshots/auditd_configuration.png)
+
+---
+
+### Establishing File Integrity Monitoring
+
+AIDE (Advanced Intrusion Detection Environment) was initialized to create a trusted baseline of critical system files. Future integrity checks can compare the current system against this baseline to identify unauthorized modifications or unexpected changes.
+
+![AIDE Initialization](screenshots/aide_initialization.png)
+
+---
+
+## Lessons Learned
+
+- Linux security infrastructure should begin with a validated baseline
+- Secure remote administration improves manageability without sacrificing control
+- Audit and logging services should be configured before deploying additional security tools
+- File integrity monitoring provides a reliable method for identifying unauthorized changes
+- Persistent logs are essential for investigations that occur after a system restart
+
+---
+
+## Next Mission
+
+Completion of this mission prepares the lab for:
+
+- Splunk SIEM deployment
+- Centralized log management
+- Vulnerability management
+- PCI DSS monitoring
+- Detection engineering
+- Digital forensics
+- Incident response
 
 ---
 
