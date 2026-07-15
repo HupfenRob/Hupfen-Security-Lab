@@ -1,12 +1,8 @@
 # Mission 2.5 – Building a Secure Windows Workstation
 
-Design and harden a Windows 10 Pro workstation that demonstrates enterprise security practices, layered defenses, and comprehensive endpoint visibility.
-
----
-
 ## Objective
 
-Build a Windows workstation that reflects the security controls commonly found in well-managed enterprise environments while balancing security, usability, and operational effectiveness.
+Build and harden a Windows 10 Pro workstation that demonstrates enterprise security best practices through layered endpoint protections, least privilege, comprehensive auditing, and realistic administrative workflows within the Hupfen Security Lab.
 
 ---
 
@@ -17,13 +13,9 @@ Build a Windows workstation that reflects the security controls commonly found i
 - Microsoft Defender
 - Microsoft Defender Attack Surface Reduction (ASR)
 - AppLocker
-- Microsoft SmartScreen
-- Controlled Folder Access
 - Sysmon
-- Windows Advanced Audit Policy
-- PowerShell Logging
-- Windows Event Viewer
-- Local Group Policy
+- Windows PowerShell
+- Advanced Audit Policy
 
 ---
 
@@ -31,163 +23,144 @@ Build a Windows workstation that reflects the security controls commonly found i
 
 | Component | Configuration |
 |-----------|---------------|
-| Operating System | Windows 10 Pro |
 | Hypervisor | VMware Workstation Pro |
+| Operating System | Windows 10 Pro |
 | Network | Management Network |
-| Primary Role | Hardened Administrative Workstation |
+| Primary Goal | Hardened administrative workstation for security operations |
 
 ---
 
-## Project Summary
+## Mission Overview
 
-This mission focused on designing and hardening a Windows workstation that reflects enterprise security best practices while remaining practical for everyday use.
+This mission transformed the standard Windows workstation created during Mission 2 into a hardened administrative endpoint modeled after enterprise security practices. Rather than relying on a single defensive product, multiple layers of protection were configured to reduce attack surface while improving endpoint visibility.
 
-Rather than relying on a single defensive product, the workstation was designed around layered security controls. Administrative privileges were separated from normal user activity, Windows security features were enabled, endpoint protections were strengthened, and comprehensive logging was configured before any future attack simulations.
+Administrative privileges were separated from everyday user activity, Windows security features were strengthened, and detailed logging was enabled before future attack simulations. Together, these controls establish a secure baseline that supports detection engineering, incident response, digital forensics, and vulnerability management throughout the remainder of the lab.
 
-The workstation was configured to generate high-quality telemetry through Sysmon, PowerShell logging, Advanced Audit Policy, and expanded Windows Event Logging. These controls provide the visibility necessary for future detection engineering, forensic analysis, and incident response exercises.
-
-Finally, realistic user activity was introduced to ensure the workstation produces the artifacts investigators expect to encounter during security investigations.
+![Mission 2.5 Workstation Overview](diagrams/secure_windows_workstation_overview.png)
 
 ---
 
 ## Security Concepts Demonstrated
 
-- Security by Design
 - Defense in Depth
 - Least Privilege
-- Administrative Separation
-- Secure Configuration Management
 - Endpoint Hardening
-- Endpoint Visibility
-- Telemetry Collection
+- Security Monitoring
+- Administrative Separation
 - Attack Surface Reduction
-- Security Validation
-- Digital Forensics Readiness
+- Endpoint Visibility
+- Security Baselining
 
 ---
 
-## Implemented Controls
+## Objectives Completed
 
-The following security controls were implemented as part of this build:
-
-- Windows fully updated
-- VMware Tools installed
-- Baseline snapshot created
-- Dedicated ITAdmin account
-- Standard user account
-- Advanced Audit Policy
-- PowerShell Logging
-- Sysmon
-- Enhanced Windows Event Logging
-- Microsoft Defender
-- Microsoft Defender Attack Surface Reduction (ASR)
-- SmartScreen
-- Controlled Folder Access
-- AppLocker
-- Local Security Authority (LSA) Protection
-- Attack surface reduction through removal of unnecessary features
+- Hardened the Windows workstation
+- Created dedicated administrative and standard user accounts
+- Configured Microsoft Defender security features
+- Enabled comprehensive Windows auditing
+- Installed and validated Sysmon
+- Applied Group Policy security settings
+- Reduced endpoint attack surface
+- Established a reusable hardened workstation baseline
 
 ---
 
 ## Skills Demonstrated
 
 - Windows Administration
-- Windows Security Hardening
-- Endpoint Security
-- Defense in Depth
-- Privileged Access Management
+- Endpoint Hardening
 - Microsoft Defender Configuration
-- AppLocker
-- PowerShell Logging
-- Sysmon Deployment
-- Windows Advanced Audit Policy
-- Security Monitoring
-- Detection Engineering Fundamentals
-- Technical Documentation
-
----
-
-## Key Takeaways
-
-- Built a secure Windows enterprise workstation.
-- Applied layered endpoint security controls.
-- Separated administrative and standard user responsibilities.
-- Configured comprehensive endpoint logging.
-- Established a secure baseline for future attack simulations.
-- Created realistic user activity for future forensic investigations.
+- AppLocker Administration
+- Windows Logging
+- Sysmon Configuration
+- Group Policy Management
+- Security Documentation
 
 ---
 
 ## Validation
 
-After configuration, the workstation was validated to confirm that security controls functioned as expected.
-
 Validation included:
 
-- Administrative account separation
-- Windows Event Logging
-- PowerShell Logging
-- Sysmon telemetry
-- Security policy application
-- Endpoint functionality after hardening
+- Confirming administrative account separation
+- Verifying Microsoft Defender protections
+- Validating Windows audit events
+- Confirming Sysmon telemetry generation
+- Verifying Group Policy application
+- Confirming workstation functionality after hardening
 
 ---
 
-## Implementation Screenshots
+## Implementation
 
 ### Creating the Initial User
 
-The initial user account establishes the administrative foundation of the workstation before additional security controls are introduced.
+The workstation was initially configured with a standard user account that would later become the primary non-administrative account. Separating administrative and everyday activities establishes the foundation for applying the principle of least privilege.
 
-![Creating the Initial User](screenshots/creating-initial-user.png)
-
----
-
-### Creating the ITAdmin Account
-
-Rather than performing everyday work with elevated privileges, a dedicated admin account is created for system administrative tasks. This separation helps reduce unnecessary exposure of privileged credentials and aligns with the principle of least privilege.
-
-![ITAdmin Account](screenshots/itadmin-account.png)
+![Creating the Initial User](screenshots/creating_initial_user.png)
 
 ---
 
-### Administrative Password Rotation
+### Creating a Dedicated Administrative Account
 
-Administrative tasks can often be automated to improve both consistency and accountability. This PowerShell script demonstrates automated local administrator password rotation while recording activity in the Windows Event Log for auditing purposes.
+A dedicated IT administrator account was created for privileged system administration. Performing administrative tasks through a separate account reduces unnecessary exposure of elevated credentials and reflects common enterprise security practices.
 
-![PowerShell Password Rotation](screenshots/powershell-password-rotation.png)
-
----
-
-### Windows Event Viewer
-
-Windows Event Viewer provides the visibility needed to monitor authentication events, system activity, and security-related changes. Establishing comprehensive logging before conducting security testing ensures evidence for future investigations.
-
-![Windows Event Viewer](screenshots/windows-event-viewer.png)
+![ITAdmin Account](screenshots/itadmin_account.png)
 
 ---
 
-### Local Group Policy
+### Automating Administrative Password Management
 
-Local Group Policy was used to configure security settings that strengthen the workstation while maintaining usability. Applying policy-based controls establishes a consistent security baseline and supports enterprise-style endpoint management.
+Administrative password rotation was automated using PowerShell to improve consistency and accountability. Automating privileged account management reduces administrative overhead while generating useful security events for future monitoring.
 
-![Local Group Policy](screenshots/group-policy-editor.png)
+![PowerShell Password Rotation](screenshots/powershell_password_rotation.png)
 
 ---
 
-## Future Use
+### Configuring Windows Security Logging
 
-This workstation serves as the hardened Windows endpoint used throughout the remainder of the Hupfen Security Lab.
+Windows Event Viewer, Advanced Audit Policy, PowerShell logging, and Sysmon were configured to provide detailed endpoint telemetry. Establishing comprehensive logging before conducting attack simulations ensures that future investigations have the evidence necessary for detection engineering and forensic analysis.
 
-Future projects include:
+![Windows Event Viewer](screenshots/windows_event_viewer.png)
 
-- Linux Server Administration
-- PCI DSS Compliance
-- Vulnerability Management
-- Detection Engineering
-- Attack Simulation
-- Digital Forensics
-- Incident Response
+---
+
+### Applying Local Security Policies
+
+Local Group Policy was used to configure security settings including endpoint protections, administrative restrictions, and additional hardening measures. Applying policy-based controls creates a consistent security baseline that closely resembles enterprise workstation management.
+
+![Local Group Policy](screenshots/group_policy_editor.png)
+
+---
+
+## Supporting Scripts
+
+PowerShell scripts used throughout this mission are located in the `scripts` directory.
+
+These scripts automate administrative tasks, demonstrate Windows security concepts, and support the workstation hardening process documented in this mission.
+
+---
+
+## Lessons Learned
+
+- Layered security controls provide stronger protection than any individual technology
+- Administrative account separation reduces unnecessary privilege exposure
+- Security logging should be configured before conducting security testing
+- Enterprise hardening improves both security visibility and future detection capabilities
+
+---
+
+## Next Mission
+
+Completion of this mission prepares the lab for:
+
+- Linux server deployment
+- Centralized logging
+- Vulnerability management
+- Detection engineering
+- Attack simulation
+- Incident response
 
 ---
 
