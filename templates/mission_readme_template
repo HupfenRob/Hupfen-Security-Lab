@@ -11,6 +11,7 @@ Guidelines
 - Separate each major section with ---
 - Keep screenshots close to the related text
 - End with validation and next steps
+- Keep implementation sections focused on one major task
 -->
 
 # Mission Title
@@ -37,6 +38,7 @@ Provide a brief description explaining what this mission accomplishes and why it
 | Component | Value |
 | Component | Value |
 | Component | Value |
+| Primary Goal | Value |
 
 ---
 
@@ -44,7 +46,7 @@ Provide a brief description explaining what this mission accomplishes and why it
 
 Provide a high-level summary describing the purpose of this mission and how it fits into the larger lab environment.
 
-Explain the overall objective without documenting every implementation detail.
+Explain the overall workflow without documenting every implementation step.
 
 ---
 
@@ -58,7 +60,7 @@ Explain the overall objective without documenting every implementation detail.
 
 ---
 
-## Mission Objectives
+## Objectives Completed
 
 - Objective completed
 - Objective completed
@@ -135,7 +137,7 @@ Describe the next implementation step.
 
 ## Next Mission
 
-This mission prepares the environment for:
+Completion of this mission prepares the lab for:
 
 - Next mission
 - Future lab expansion
