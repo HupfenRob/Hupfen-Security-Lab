@@ -1,0 +1,143 @@
+<!--
+Mission README Template
+
+Guidelines
+
+- Place screenshots in /screenshots
+- Place diagrams in /diagrams (if applicable)
+- Present implementation in chronological order
+- Use one screenshot per major step
+- Explain why each step is performed
+- Separate each major section with ---
+- Keep screenshots close to the related text
+- End with validation and next steps
+-->
+
+# Mission Title
+
+## Objective
+
+Provide a brief description explaining what this mission accomplishes and why it is important within the overall lab.
+
+---
+
+## Technologies Used
+
+- Technology 1
+- Technology 2
+- Technology 3
+- Technology 4
+
+---
+
+## Environment
+
+| Component | Configuration |
+|-----------|---------------|
+| Component | Value |
+| Component | Value |
+| Component | Value |
+
+---
+
+## Mission Overview
+
+Provide a high-level summary describing the purpose of this mission and how it fits into the larger lab environment.
+
+Explain the overall objective without documenting every implementation detail.
+
+---
+
+## Security Concepts Demonstrated
+
+- Concept
+- Concept
+- Concept
+- Concept
+- Concept
+
+---
+
+## Mission Objectives
+
+- Objective completed
+- Objective completed
+- Objective completed
+- Objective completed
+- Objective completed
+
+---
+
+## Skills Demonstrated
+
+- Skill
+- Skill
+- Skill
+- Skill
+- Skill
+
+---
+
+## Validation
+
+Validation included:
+
+- Validation step
+- Validation step
+- Validation step
+- Validation step
+- Validation step
+
+---
+
+## Implementation
+
+### Step One
+
+Explain what was configured during this step and why it was necessary.
+
+![Step One](screenshots/image_name.png)
+
+---
+
+### Step Two
+
+Describe the next implementation step.
+
+![Step Two](screenshots/image_name.png)
+
+---
+
+### Step Three
+
+Describe the next implementation step.
+
+![Step Three](screenshots/image_name.png)
+
+---
+
+### Step Four
+
+Describe the next implementation step.
+
+![Step Four](screenshots/image_name.png)
+
+---
+
+## Lessons Learned
+
+- Lesson learned
+- Lesson learned
+- Lesson learned
+- Lesson learned
+
+---
+
+## Next Mission
+
+This mission prepares the environment for:
+
+- Next mission
+- Future lab expansion
+- Additional security controls
+- Related project work
