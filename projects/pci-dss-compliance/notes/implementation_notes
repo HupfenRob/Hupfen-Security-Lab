@@ -1,0 +1,127 @@
+# PCI DSS-Inspired Security Operations Lab Implementation Notes
+
+## Project Overview
+
+This project was designed to demonstrate the practical implementation of enterprise security concepts using technologies commonly found in modern security operations environments. Rather than pursuing PCI DSS compliance itself, the objective was to build a lab inspired by PCI DSS principles and validate that each major security control functioned as intended.
+
+Throughout the project, emphasis was placed on designing a cohesive security architecture, generating meaningful telemetry, developing repeatable detections, and validating every major component through controlled testing.
+
+---
+
+## Design Philosophy
+
+The environment was built around a simple principle:
+
+> **Security controls should be validated, not assumed.**
+
+Instead of deploying technologies independently, each component was integrated into a complete security monitoring pipeline where every layer contributed additional visibility and context.
+
+Major design goals included:
+
+- Separate systems into distinct security zones
+- Centralize telemetry from multiple sources
+- Monitor both network and endpoint activity
+- Develop repeatable security detections
+- Validate every control through realistic testing
+
+---
+
+## Security Architecture
+
+The environment consists of three primary network segments:
+
+- **USERS** — Standard user workstations and attack simulation
+- **MGMT** — Administrative systems and centralized security tooling
+- **CDE** — Simulated Cardholder Data Environment
+
+Traffic between each network segment is routed through pfSense, allowing firewall policies, logging, and intrusion detection to be centrally managed while maintaining clear trust boundaries between systems.
+
+---
+
+## Centralized Visibility
+
+Visibility was established before implementing detection capabilities.
+
+Telemetry was collected from multiple sources, including:
+
+- Windows Event Logs
+- Sysmon
+- Linux system logs
+- Linux auditd
+- pfSense firewall logs
+- Suricata intrusion detection events
+
+Splunk Enterprise served as the centralized SIEM, allowing events from multiple systems to be searched, correlated, and investigated from a single platform.
+
+---
+
+## Detection Engineering
+
+After validating telemetry collection, the project progressed from passive monitoring to active detection.
+
+Suricata generated structured EVE JSON events for network activity, while Splunk searches transformed those events into repeatable detections capable of automatically identifying reconnaissance activity.
+
+Scheduled alerts were then created to notify analysts whenever matching activity occurred, demonstrating a complete detection engineering workflow.
+
+---
+
+## Validation Methodology
+
+Every major component was validated individually before validating the complete monitoring pipeline.
+
+Validation activities included:
+
+- Verifying network segmentation
+- Confirming firewall routing
+- Testing centralized log collection
+- Validating endpoint telemetry
+- Confirming Suricata detections
+- Generating controlled reconnaissance traffic
+- Correlating telemetry across multiple log sources
+- Triggering automated Splunk alerts
+
+This phased validation process ensured that problems could be isolated quickly while also demonstrating that the completed environment functioned as an integrated security operations platform.
+
+---
+
+## Key Engineering Decisions
+
+Several architectural decisions significantly improved the quality of the environment:
+
+- Using pfSense as the central routing and security platform
+- Separating management systems from user workstations
+- Collecting endpoint and network telemetry simultaneously
+- Using structured EVE JSON instead of traditional syslog alerts
+- Validating detections through controlled attack simulation rather than assuming successful configuration
+
+These decisions increased investigative context while producing a more realistic enterprise-style monitoring environment.
+
+---
+
+## Lessons Learned
+
+Several themes emerged throughout the project:
+
+- Security architecture should be planned before deploying security tools.
+- Centralized visibility enables effective investigation and event correlation.
+- Detection quality depends on high-quality telemetry.
+- Security controls require continuous validation rather than one-time deployment.
+- Layered security controls provide greater investigative confidence than any individual technology.
+
+---
+
+## Foundation for Future Projects
+
+This project established the architecture used throughout the remainder of the cybersecurity home lab.
+
+Future projects build directly upon this environment, including:
+
+- Vulnerability Management
+- Detection Engineering
+- Threat Hunting
+- Incident Response
+- Digital Forensics
+- Security Monitoring
+- Purple Team Exercises
+
+The environment remains an active platform for developing, validating, and documenting additional security capabilities while preserving the architectural principles established during this project.

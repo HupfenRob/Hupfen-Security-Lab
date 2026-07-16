@@ -1,0 +1,26 @@
+##########################################################
+# Detection Name:
+# Suricata Nmap Reconnaissance Detection
+#
+# Description:
+# Detects Suricata ET Open alerts associated with Nmap
+# reconnaissance activity. This search was developed during
+# the PCI DSS-Inspired Security Operations Lab to validate
+# the end-to-end security monitoring pipeline from network
+# activity through automated alert generation.
+#
+# Data Source:
+# Suricata EVE JSON
+#
+# Event ID(s):
+# N/A
+#
+# MITRE ATT&CK Technique(s):
+# T1595 - Active Scanning
+# T1046 - Network Service Discovery
+##########################################################
+
+index=main sourcetype=suricata
+signature="*ET SCAN Nmap*"
+| table _time host src_ip dest_ip dest_port proto signature severity
+| sort -_time

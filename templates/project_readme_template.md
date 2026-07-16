@@ -10,6 +10,7 @@ Guidelines
 - Use sentence case for section descriptions
 - Separate each major section with ---
 - Keep Technologies Used limited to major technologies
+- Keep Technologies Used in alphabetic order
 - Future Use should focus on follow-on projects
 -->
 
