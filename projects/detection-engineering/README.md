@@ -209,4 +209,4 @@ This detection library supports future projects involving:
 
 **Detection Engineering Project**
 
-[add blog URL after publishing]
+[Read the article at Hupfen Dynamics](https://hupfendynamics.com/blog/f/designing-and-building-a-detection-engineering-program)
